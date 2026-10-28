@@ -106,9 +106,17 @@
               <a class="btn btn-ghost" href="#como-funciona">Cómo funciona</a>
             </div>
             <div class="hero-trust">
-              <div><strong>12</strong>líneas de servicio en construcción</div>
-              <div><strong>5</strong>servicios activos hoy</div>
-              <div><strong>100%</strong>técnicos identificados</div>
+              <div>
+                <strong data-count="12">12</strong>líneas de servicio en
+                construcción
+              </div>
+              <div>
+                <strong data-count="6">6</strong>servicios activos hoy
+              </div>
+              <div>
+                <strong data-count="100" data-suffix="%">100%</strong>técnicos
+                identificados
+              </div>
             </div>
           </div>
           <div class="hero-visual">
@@ -138,12 +146,12 @@
           <!-- Indicadores -->
           <div class="service-stats">
             <div class="service-stat">
-              <strong>5</strong>
+              <strong data-count="6">6</strong>
               <span>servicios activos hoy</span>
             </div>
 
             <div class="service-stat">
-              <strong>100%</strong>
+              <strong data-count="100" data-suffix="%">100%</strong>
               <span>técnicos identificados</span>
             </div>
 
@@ -565,6 +573,86 @@
                 <a class="btn btn-primary" href="#cotizacion"> Consultar </a>
               </div>
             </article>
+
+            <!-- Aseo y Servicios Generales -->
+            <article class="ticket active-service-card">
+              <div class="ticket-top">
+                <div class="ticket-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 21l6-6"></path>
+                    <path d="M13 6l5-3 2 2-3 5-6 6-4-4z"></path>
+                  </svg>
+                </div>
+
+                <span class="ticket-badge">Activo</span>
+              </div>
+
+              <h3>Aseo y Servicios Generales</h3>
+
+              <p class="ticket-sub">
+                Aseo y servicios generales para hogares y empresas
+              </p>
+
+              <ul class="ticket-list">
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Aseo general de oficinas, locales y conjuntos
+                </li>
+
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Servicios generales y apoyo operativo
+                </li>
+
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Personal identificado por la empresa
+                </li>
+              </ul>
+
+              <div class="ticket-foot">
+                <div class="price">
+                  Cotización gratuita
+                  <span>Sin compromiso</span>
+                </div>
+
+                <a class="btn btn-primary" href="#cotizacion"> Solicitar </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -906,7 +994,7 @@
             </div>
 
             <!-- Aseo y Servicios Generales -->
-            <div class="cat">
+            <div class="cat is-active">
               <div class="cat-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -921,7 +1009,7 @@
                 </svg>
               </div>
               <h3>Aseo y Servicios Generales</h3>
-              <span class="cat-status">Sujeto a cotización</span>
+              <span class="cat-status">Disponible ahora</span>
             </div>
 
             <!-- Eventos y Servicios Especiales -->
@@ -966,7 +1054,10 @@
             <li>Ferretería y Construcción</li>
             <li>Energía Solar y Tratamiento</li>
             <li>Aseo, Químicos y Salud</li>
-            <li>Papelería y Recreación</li>
+            <li class="is-available">
+              <span>Papelería y Recreación</span>
+              <span class="sum-status">Disponible ahora</span>
+            </li>
             <li>Seguridad Industrial</li>
             <li>Gastronomía y Panadería</li>
             <li>Apicultura y Agroindustria</li>
@@ -1050,9 +1141,7 @@
                   <option>Formación y Capacitación</option>
                   <option>Consultoría y Proyectos</option>
                   <option>Seguridad y Tecnología</option>
-                  <option>
-                    Aseo y Servicios Generales (Sujeto a cotización)
-                  </option>
+                  <option>Aseo y Servicios Generales</option>
                   <option>
                     Eventos y Servicios Especiales (Sujeto a cotización)
                   </option>

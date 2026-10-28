@@ -21,7 +21,7 @@ Sitio estático, sin dependencias ni paso de compilación:
 ├── index.html              # Página única: header, hero, servicios, suministros,
 │                           # educación, cotización, footer y botón flotante
 ├── styles.css              # Todos los estilos y la paleta de marca
-├── script.js               # Menú móvil y formulario → WhatsApp
+├── script.js               # Menú móvil, animaciones e interacciones y formulario → WhatsApp
 ├── assets/
 │   ├── logo-principal.png  # Logotipo (también usado como favicon)
 │   └── logo-slogan.png     # Logo con slogan (pie de página)

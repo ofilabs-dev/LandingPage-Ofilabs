@@ -286,6 +286,7 @@ header {
   }
 
   .nav-links .nav-cta {
+    width: calc(100% - 48px);
     margin: 16px 24px;
     text-align: center;
   }
@@ -1150,14 +1151,286 @@ footer {
   fill: var(--white);
 }
 
+/* ---------- Interacción y microanimaciones ---------- */
+section[id],
+main[id] {
+  scroll-margin-top: 84px;
+}
+
+header {
+  transition: box-shadow 0.2s ease;
+}
+
+header.is-scrolled {
+  box-shadow: 0 12px 26px -22px rgba(20, 27, 34, 0.8);
+}
+
+.nav-links a.is-current {
+  color: var(--ink);
+  border-color: var(--green);
+}
+
+.btn-primary:hover,
+.btn-ghost:hover {
+  transform: translateY(-1px);
+}
+
+/* Revelado al entrar en pantalla */
+.reveal-in {
+  animation: reveal-up 0.62s cubic-bezier(0.22, 0.7, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Tarjetas de servicio: toda la tarjeta lleva a la cotización */
+.cat {
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cat[role="button"] {
+  cursor: pointer;
+}
+
+.cat[role="button"]::after {
+  content: "→";
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cat[role="button"] h3 {
+  transition: color 0.2s ease;
+}
+
+.cat[role="button"]:hover,
+.cat[role="button"]:focus-visible {
+  background: var(--white);
+  box-shadow: inset 0 0 0 2px var(--lima);
+}
+
+.cat[role="button"]:hover::after,
+.cat[role="button"]:focus-visible::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cat[role="button"]:hover h3,
+.cat[role="button"]:focus-visible h3 {
+  color: var(--navy-deep);
+}
+
+.cat-icon svg {
+  transition: transform 0.2s ease;
+}
+
+.cat[role="button"]:hover .cat-icon svg,
+.cat[role="button"]:focus-visible .cat-icon svg {
+  transform: translateY(-2px) rotate(-4deg);
+}
+
+/* Punto pulsante de disponibilidad */
+.cat.is-active .cat-status::before,
+.sum-status::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  vertical-align: 1px;
+  animation: status-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(82, 145, 20, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 4px rgba(82, 145, 20, 0);
+  }
+}
+
+/* Tarjetas y filas con respuesta al puntero */
+.ticket:hover {
+  translate: 0 -4px;
+  box-shadow: 0 26px 48px -24px rgba(35, 58, 102, 0.45);
+}
+
+.ticket {
+  transition:
+    translate 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.active-services-grid .ticket:nth-child(2) {
+  animation-delay: 0.22s;
+}
+
+.active-services-grid .ticket:nth-child(3) {
+  animation-delay: 0.29s;
+}
+
+.active-services-grid .ticket:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+.active-services-grid .ticket:nth-child(5) {
+  animation-delay: 0.43s;
+}
+
+.active-services-grid .ticket:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.service-stat {
+  transition: background 0.2s ease;
+}
+
+.service-stat:hover {
+  background: #f8faf1;
+}
+
+.step-num {
+  transition: color 0.2s ease;
+}
+
+.step:hover .step-num {
+  color: var(--green);
+}
+
+.cliente-card {
+  transition: background 0.2s ease;
+}
+
+.cliente-card:hover {
+  background: #f6f8ee;
+}
+
+.cliente-mark {
+  transition: background 0.2s ease;
+}
+
+.cliente-card:hover .cliente-mark {
+  background: var(--navy-deep);
+}
+
+.sum-grid li {
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.sum-grid li:hover {
+  background: rgba(35, 58, 102, 0.05);
+}
+
+.sum-grid li.is-available {
+  color: var(--ink);
+}
+
+.sum-status {
+  flex-shrink: 0;
+  align-self: center;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(178, 211, 44, 0.26);
+  color: var(--green-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Formulario resaltado al llegar desde una tarjeta */
+form.is-prompted {
+  animation: form-pulse 1.8s ease;
+}
+
+@keyframes form-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(178, 211, 44, 0.9);
+  }
+
+  60% {
+    box-shadow: 0 0 0 10px rgba(178, 211, 44, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(178, 211, 44, 0);
+  }
+}
+
+/* Anillo del botón de WhatsApp */
+.wa-float::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.5);
+  pointer-events: none;
+  animation: wa-ring 2.8s ease-out infinite;
+}
+
+@keyframes wa-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  70%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ticket {
     animation: none;
     opacity: 1;
     transform: none;
+    translate: none;
   }
 
   html {
     scroll-behavior: auto;
+  }
+
+  .reveal-in,
+  .wa-float::after,
+  .cat.is-active .cat-status::before,
+  .sum-status::before,
+  form.is-prompted {
+    animation: none;
+  }
+
+  .ticket:hover,
+  .btn-primary:hover,
+  .btn-ghost:hover {
+    translate: none;
+    transform: none;
   }
 }
