@@ -72,6 +72,6 @@ Al ser un sitio estático, se puede publicar sin configuración adicional en **G
 - **Razón social:** Servioficios y Suministros S.A.S. — OFILABS S.A.S.
 - **NIT:** 901.021.615-8 · Matrícula No. 94175 (Cámara de Comercio de Sincelejo)
 - **Dirección:** CL 27 15A 07, Barrio Santa Fe, Sincelejo, Sucre, Colombia
-- **WhatsApp / Celular:** [+57 320 759 2276](https://wa.me/573207592276)
+- **WhatsApp / Celular:** [+57 312 285 0226](https://wa.me/message/WFJZWNVNY55LJ1)
 - **Teléfono fijo:** (605) 271 5053
 - **Correo:** servioficiosysuministros@gmail.com

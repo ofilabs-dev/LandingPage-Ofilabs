@@ -316,7 +316,9 @@
       servicio +
       (descripcion ? "\nDetalle: " + descripcion : "");
 
-    var url = "https://wa.me/573207592276?text=" + encodeURIComponent(mensaje);
+    // El enlace corto wa.me/message no admite texto precargado, por eso el
+    // formulario usa el número directo (mismo WhatsApp) con el mensaje.
+    var url = "https://wa.me/573122850226?text=" + encodeURIComponent(mensaje);
     window.open(url, "_blank", "noopener");
   });
 })();
